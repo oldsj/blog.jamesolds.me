@@ -1,5 +1,5 @@
-baseurl = "https://oldsjam.gitlab.io/"
+baseurl = "https://blog.jamesolds.me/"
 languageCode = "en-us"
-title = "jamesolds.me"
+title = "blog.jamesolds.me"
 pygmentsuseclasses = true
 theme = "base16"
