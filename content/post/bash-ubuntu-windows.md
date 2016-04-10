@@ -1,10 +1,10 @@
 +++
 date = "2016-04-08T12:55:46-05:00"
-title = "bash ubuntu windows"
+title = "bash on ubuntu on windows"
 tags = [ "OS" ]
 +++
 
-Bash On Ubuntu On Windows - Windows Subsystem for Linux
+**Bash On Ubuntu On Windows - Windows Subsystem for Linux**
 -------------------------------------------------------
 
 In the latest test build of Windows 10 (build 14316), Microsoft introduced
@@ -14,7 +14,7 @@ ubuntu’s repositories and PPAs right from windows! This is actually pretty coo
 More background can be found at
 <https://blogs.windows.com/windowsexperience/2016/04/06/announcing-windows-10-insider-preview-build-14316/>
 
-Join Windows Insider
+**Join Windows Insider**
 --------------------
 
 1.  Goto windows update settings, click on Advanced options
@@ -32,7 +32,7 @@ Join Windows Insider
     -   Click update build (if its not available just wait a few more mins)
 
 
-Install Ubuntu
+**Install Ubuntu**
 --------------
 
 1.  After you have the new windows build, launch programs and features
@@ -46,3 +46,5 @@ Install Ubuntu
 4.  Hit y to install Ubuntu
 
 5.  windows key -> “bash” will now give you bash on ubuntu... on windows
+
+
