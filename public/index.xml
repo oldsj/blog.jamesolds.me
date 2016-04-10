@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>jamesolds.me</title>
+    <title>blog.jamesolds.me</title>
     <link>https://blog.jamesolds.me/</link>
-    <description>Recent content on jamesolds.me</description>
+    <description>Recent content on blog.jamesolds.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Apr 2016 18:33:24 -0500</lastBuildDate>
@@ -15,7 +15,7 @@
       <pubDate>Wed, 06 Apr 2016 18:33:24 -0500</pubDate>
       
       <guid>https://blog.jamesolds.me/post/test/</guid>
-      <description>&lt;p&gt;this is actually pretty dope&lt;/p&gt;
+      <description>&lt;p&gt;sup yall&lt;/p&gt;
 </description>
     </item>
     

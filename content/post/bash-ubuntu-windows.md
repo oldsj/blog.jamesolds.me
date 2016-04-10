@@ -1,7 +1,7 @@
 +++
 date = "2016-04-08T12:55:46-05:00"
 title = "bash ubuntu windows"
-
+tags = [ "OS" ]
 +++
 
 Bash On Ubuntu On Windows - Windows Subsystem for Linux
@@ -9,7 +9,7 @@ Bash On Ubuntu On Windows - Windows Subsystem for Linux
 
 In the latest test build of Windows 10 (build 14316), Microsoft introduced
 Ubuntu userland as a windows exe. This means you can apt-get anything in
-ubuntu’s repositories as well as ppas! Needless to say this is pretty cool.
+ubuntu’s repositories and PPAs right from windows! This is actually pretty cool.
 
 More background can be found at
 <https://blogs.windows.com/windowsexperience/2016/04/06/announcing-windows-10-insider-preview-build-14316/>
