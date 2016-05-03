@@ -12,7 +12,7 @@ All of the code can be found on https://github.com/oldsjam/learnsystems
 
 ### Chapter One
 
-#####1-1
+##### 1-1
 Not much to say here, I do like rust's println! macro which saves you from an ugly "\n" in your code.
 
 1-1.c
