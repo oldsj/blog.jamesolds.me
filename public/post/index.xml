@@ -1,21 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on blog.jamesolds.me</title>
+    <title>Posts on [student@umuc.edu]$</title>
     <link>https://blog.jamesolds.me/post/</link>
-    <description>Recent content in Posts on blog.jamesolds.me</description>
+    <description>Recent content in Posts on [student@umuc.edu]$</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Apr 2016 18:33:24 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 02 May 2016 22:10:46 -0500</lastBuildDate>
     <atom:link href="https://blog.jamesolds.me/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>test</title>
-      <link>https://blog.jamesolds.me/post/test/</link>
-      <pubDate>Wed, 06 Apr 2016 18:33:24 -0500</pubDate>
+      <title>Learning Systems Programming: Rust vs C (Part 1)</title>
+      <link>https://blog.jamesolds.me/post/systems-programming-rust-vs-c-1/</link>
+      <pubDate>Mon, 02 May 2016 22:10:46 -0500</pubDate>
       
-      <guid>https://blog.jamesolds.me/post/test/</guid>
-      <description>&lt;p&gt;sup yall&lt;/p&gt;
+      <guid>https://blog.jamesolds.me/post/systems-programming-rust-vs-c-1/</guid>
+      <description>
+
+&lt;h2 id=&#34;learning-systems-programming-rust-vs-c-part-1:1a8da960fa9208a0f2ad7fc138674785&#34;&gt;Learning Systems Programming: Rust vs C (Part 1)&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been wanting to learn systems programming for a long time now. After reading about Rust every-other-day on Hacker News I&amp;rsquo;ve been dying to dive into it but have found that most tutorials online get kind of tough to follow fot those of us without a C/C++ background. So, I found a copy of &lt;a href=&#34;http://www.amazon.com/Programming-Language-Brian-W-Kernighan/dp/0131103628&#34;&gt;The C Programming Language&lt;/a&gt; on Amazon for 4 bucks and will be learning both C and Rust at the same time by doing the excercises in Kernighan &amp;amp; Ritchie&amp;rsquo;s highly praised 2nd edititon book in C and Rust side by side.&lt;/p&gt;
+
+&lt;p&gt;All of the code can be found on &lt;a href=&#34;https://github.com/oldsjam/learnsystems&#34;&gt;https://github.com/oldsjam/learnsystems&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;chapter-one:1a8da960fa9208a0f2ad7fc138674785&#34;&gt;Chapter One&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-1:1a8da960fa9208a0f2ad7fc138674785&#34;&gt;1-1&lt;/h4&gt;
+
+&lt;p&gt;Not much to say here, I do like rust&amp;rsquo;s println! macro which saves you from an ugly &amp;ldquo;\n&amp;rdquo; in your code.&lt;/p&gt;
+
+&lt;p&gt;1-1.c&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+main() {
+  printf(&amp;quot;hello, world\n&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;1-1.rs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-rust&#34;&gt;fn main() {
+  println!(&amp;quot;hello, world&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>bash on ubuntu on windows</title>
+      <link>https://blog.jamesolds.me/post/bash-ubuntu-windows/</link>
+      <pubDate>Fri, 08 Apr 2016 12:55:46 -0500</pubDate>
+      
+      <guid>https://blog.jamesolds.me/post/bash-ubuntu-windows/</guid>
+      <description>
+
+&lt;h2 id=&#34;bash-on-ubuntu-on-windows-windows-subsystem-for-linux:e5d0ed4ac8984e594b9261682760002a&#34;&gt;&lt;strong&gt;Bash On Ubuntu On Windows - Windows Subsystem for Linux&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;In the latest test build of Windows 10 (build 14316), Microsoft introduced
+Ubuntu userland as a windows exe. This means you can apt-get anything in
+ubuntu’s repositories and PPAs right from windows! This is actually pretty cool.&lt;/p&gt;
+
+&lt;p&gt;More background can be found at
+&lt;a href=&#34;https://blogs.windows.com/windowsexperience/2016/04/06/announcing-windows-10-insider-preview-build-14316/&#34;&gt;https://blogs.windows.com/windowsexperience/2016/04/06/announcing-windows-10-insider-preview-build-14316/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;join-windows-insider:e5d0ed4ac8984e594b9261682760002a&#34;&gt;&lt;strong&gt;Join Windows Insider&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Goto windows update settings, click on Advanced options&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Join the Windows Insider program&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;After your account is linked, change your Insider level to Fast&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I rebooted after this and had to wait about 10 minutes&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Goto Insider hub (windows key -&amp;gt; “insider”)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Goto your account settings -&amp;gt; devices&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Click update build (if its not available just wait a few more mins)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;install-ubuntu:e5d0ed4ac8984e594b9261682760002a&#34;&gt;&lt;strong&gt;Install Ubuntu&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;After you have the new windows build, launch programs and features&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;windows key -&amp;gt; “windows features”&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Check “Windows Subsystem for Linux (Beta)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Launch bash (windows key -&amp;gt; “bash”)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Hit y to install Ubuntu&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;windows key -&amp;gt; “bash” will now give you bash on ubuntu&amp;hellip; on windows&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     

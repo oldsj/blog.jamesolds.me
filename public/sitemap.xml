@@ -3,13 +3,18 @@
   
   <url>
     <loc>https://blog.jamesolds.me/</loc>
-    <lastmod>2016-04-06T18:33:24-05:00</lastmod>
+    <lastmod>2016-05-02T22:10:46-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.jamesolds.me/post/test/</loc>
-    <lastmod>2016-04-06T18:33:24-05:00</lastmod>
+    <loc>https://blog.jamesolds.me/post/systems-programming-rust-vs-c-1/</loc>
+    <lastmod>2016-05-02T22:10:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.jamesolds.me/post/bash-ubuntu-windows/</loc>
+    <lastmod>2016-04-08T12:55:46-05:00</lastmod>
   </url>
   
 </urlset>
