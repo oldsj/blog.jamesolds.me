@@ -40,11 +40,11 @@ We get to try out some fancy features of the Rust language here with a pattern v
 ```rust
 let (lower, upper, step) = (0.0, 300.0, 20.0)
 ```
-and by describing the fahr variable as mutable with the mut keyword. By default, in Rust everything is immutable and if for example you'd like a variable to be able to be changed in the future without reassigning it with let, you have to use the mut keyword. I like secure-by-default and it's not a huge inconvenience so this is great. I found the formatting this exercise a little tough in Rust. Firstly, I had to use a macro to get the float numbers to only show 1 decimal place:
+and by describing the fahr variable as mutable with the mut keyword. By default, everything in Rust is immutable and if, for example you'd like a variable to be able to be changed in the future without reassigning it with let, you have to use the mut keyword. I like secure-by-default and it's not a huge inconvenience so this is great. I found the formatting this exercise a little tough in Rust. Firstly, I had to use a macro to get the float numbers to only show 1 decimal place:
 ```rust
 format!("{:.*}", 1, ((5.0/9.0) * (fahr-32.0)));
 ```
-Then, I had to read more on Rust's formatting syntax to get it to give me the same right-justified, tabbed output as we had in C. At first pass, I think the C syntax here make more sense but I can see Rust's formatter being more powerful in the long run. By the way, it's really nice not to have to a) declare variables in advance as we had to in C, and b) Rust's type-inference lets us not have to worry manually describing the types of our variables either (at least not yet).
+Then, I had to read more on Rust's formatting syntax to get it to give me the same right-justified, tabbed output as we had in C. At first pass, I think the C syntax here make more sense but I can see Rust's formatting syntax being more powerful in the long run. By the way, it's really nice not to have to a) declare variables in advance as we had to in C, and b) Rust's type-inference lets us not have to worry manually describing the types of our variables either (at least not yet).
 
 main.c
 ```c
@@ -81,3 +81,5 @@ fn main() {
 	}
 }
 ```
+#### 1.3
+Fahrenheit to Celsius Table

@@ -2,8 +2,9 @@ baseurl = "https://blog.jamesolds.me/"
 languageCode = "en-us"
 title = "[student@umuc.edu]$"
 pygmentsuseclasses = true
-pygmentsStyle = "monokai"
+pygmentsStyle = "native"
 theme = "vienna"
+description = "The blog of a prior Network Engineer, current CS student, and programmer wannabe"
 
 [taxonomies]
 tag = "tags"
