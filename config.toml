@@ -4,7 +4,7 @@ title = "[student@umuc.edu]$"
 pygmentsuseclasses = true
 pygmentsStyle = "native"
 theme = "vienna"
-description = "The blog of a prior Network Engineer, current CS student, and programmer wannabe"
+description = "The blog of a Network Engineer, current CS student, and programmer wannabe"
 
 [taxonomies]
 tag = "tags"
@@ -31,5 +31,5 @@ tag = "tags"
     #contact = "mailto:mail@jamesolds.me"
     #bio = "Your short bio"
     # Short subtitle/tagline. This is displayed in the header.
-    #subtitle = "Short subtitle/tagline of your blog"
+    subtitle = "The blog of a Network Engineer, current CS student, and programmer wannabe"
     #themecolor = "#000000" # Defines the tab color in Chrome for Android.
