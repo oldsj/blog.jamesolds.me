@@ -19,9 +19,8 @@ disqusShortname = "jamesolds"
     name = "James Olds"
     role = "Computer Science Student"
     organization = "University of Maryland University College"
-    email = "test@example.org"
-    address = "Stanford AI Lab, Stanford University, California, 90210, USA."
-    phone = "888 888 88 88"
+    email = "blog@jamesolds.me"
+    address = "Oklahoma City, OK"
 
     # Date format (refer to Go's formatting options)
     #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
