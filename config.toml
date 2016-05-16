@@ -1,7 +1,7 @@
 # Website URL (e.g. http://www.example.com/)
 baseurl = "/"
 
-title = "[student@umuc]"
+title = "Finding What Works"
 copyright = "&copy; 2016 James Olds"
 languageCode = "en-us"
 theme = "academic"
