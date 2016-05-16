@@ -4,9 +4,6 @@ title = "bash on ubuntu on windows"
 tags = [ "OS" ]
 +++
 
-**Bash On Ubuntu On Windows - Windows Subsystem for Linux**
--------------------------------------------------------
-
 In the latest test build of Windows 10 (build 14316), Microsoft introduced
 Ubuntu userland as a windows exe. This means you can apt-get anything in
 ubuntu’s repositories and PPAs right from windows! This is actually pretty cool.
