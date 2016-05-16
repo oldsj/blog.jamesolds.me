@@ -9,7 +9,7 @@ pygmentsUseClasses = false
 pygmentsStyle = "monokai"
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = "jamesolds"
+# disqusShortname = "jamesolds"
 
 # Enable analytics by entering your Google Analytics tracking ID
 # googleAnalytics = ""
