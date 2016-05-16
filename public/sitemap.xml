@@ -2,18 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.jamesolds.me/</loc>
+    <loc>/</loc>
     <lastmod>2016-05-02T22:10:46-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.jamesolds.me/post/systems-programming-rust-vs-c-1/</loc>
+    <loc>/post/systems-programming-rust-vs-c-1/</loc>
     <lastmod>2016-05-02T22:10:46-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.jamesolds.me/post/bash-ubuntu-windows/</loc>
+    <loc>/home/about/</loc>
+    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/bash-ubuntu-windows/</loc>
     <lastmod>2016-04-08T12:55:46-05:00</lastmod>
   </url>
   

@@ -1,24 +1,23 @@
 # Website URL (e.g. http://www.example.com/)
 baseurl = "/"
 
-title = "[student@umuc]"
-copyright = "&copy; 2016 James Olds"
+title = "Academic Theme"
+copyright = "&copy; 2016 Your Name"
 languageCode = "en-us"
 theme = "academic"
-pygmentsUseClasses = false
-pygmentsStyle = "monokai"
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = "jamesolds"
+disqusShortname = "spf13"
 
 # Enable analytics by entering your Google Analytics tracking ID
-# googleAnalytics = ""
+googleAnalytics = ""
 
 
 [params]
-    name = "James Olds"
-    role = "Computer Science Student"
-    organization = "University of Maryland University College"
+    name = "Lena Smith"
+    role = "Professor of Artificial Intelligence"
+    organization = "Stanford University"
+    interests = ["Artificial Intelligence", "Computational Linguistics", "Information Retrieval"]
     email = "test@example.org"
     address = "Stanford AI Lab, Stanford University, California, 90210, USA."
     phone = "888 888 88 88"
@@ -32,32 +31,22 @@ disqusShortname = "jamesolds"
 
     # Link custom CSS and JS assets (relative to /static/css and /static/js respectively)
     custom_css = []
-    custom_js  = ["highlight.pack.js"]
-
-    [[params.certification]]
-        cert = "CCNP Routing and Switching"
-        organization = "Cisco"
-
-
-    [[params.certification]]
-        cert = "CCNA Security"
-        organization = "Cisco"
-        year = "2015 - 2018"
-
-    [[params.certification]]
-        cert = "ITIL Foundation"
-        organization = "EXIN"
-        year = "2015"
-
-    [[params.certification]]
-        cert = "CASP"
-        organization = "CompTIA"
-        year = "2015 - 2018"
+    custom_js  = []
 
     [[params.education]]
-        course = "BSc in Computer Science"
-        institution = "University of Maryland University College"
-        year = "Expected 2017"
+        course = "PhD in Artificial Intelligence"
+        institution = "Stanford University"
+        year = 2012
+
+    [[params.education]]
+        course = "MEng in Artificial Intelligence"
+        institution = "Massachusetts Institute of Technology"
+        year = 2009
+
+    [[params.education]]
+        course = "BSc in Artificial Intelligence"
+        institution = "Massachusetts Institute of Technology"
+        year = 2008
 
     # Social/Academic Networking
     #
@@ -73,17 +62,22 @@ disqusShortname = "jamesolds"
     [[params.social]]
         icon = "envelope"
         icon_pack = "fa"
-        link = "mailto:blog@jamesolds.me"
+        link = "mailto:test@example.org"
 
     [[params.social]]
         icon = "twitter"
         icon_pack = "fa"
-        link = "//twitter.com/oldsjam"
+        link = "//twitter.com/GeorgeCushen"
+
+    [[params.social]]
+        icon = "google-scholar"
+        icon_pack = "ai"
+        link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
 
     [[params.social]]
         icon = "github"
         icon_pack = "fa"
-        link = "//github.com/oldsjam"
+        link = "//github.com/gcushen"
 
 
 # Navigation Links
@@ -96,16 +90,26 @@ disqusShortname = "jamesolds"
     weight = 1
 
 [[menu.main]]
-    name = "Posts"
-    url = "#posts"
+    name = "Publications"
+    url = "#publications"
     weight = 2
 
-#[[menu.main]]
-#    name = "Projects"
-#    url = "#projects"
-#    weight = 3
+[[menu.main]]
+    name = "Posts"
+    url = "#posts"
+    weight = 3
+
+[[menu.main]]
+    name = "Projects"
+    url = "#projects"
+    weight = 4
+
+[[menu.main]]
+    name = "Teaching"
+    url = "#teaching"
+    weight = 5
 
 [[menu.main]]
     name = "Contact"
     url = "#contact"
-    weight = 4
+    weight = 6

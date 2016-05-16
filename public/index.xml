@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>[student@umuc.edu]$</title>
-    <link>https://blog.jamesolds.me/</link>
-    <description>Recent content on [student@umuc.edu]$</description>
+    <title>[student@umuc]</title>
+    <link>/</link>
+    <description>Recent content on [student@umuc]</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; 2016 James Olds</copyright>
     <lastBuildDate>Mon, 02 May 2016 22:10:46 -0500</lastBuildDate>
-    <atom:link href="https://blog.jamesolds.me/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Learning Systems Programming: Rust vs C (Part 1)</title>
-      <link>https://blog.jamesolds.me/post/systems-programming-rust-vs-c-1/</link>
+      <link>/post/systems-programming-rust-vs-c-1/</link>
       <pubDate>Mon, 02 May 2016 22:10:46 -0500</pubDate>
       
-      <guid>https://blog.jamesolds.me/post/systems-programming-rust-vs-c-1/</guid>
+      <guid>/post/systems-programming-rust-vs-c-1/</guid>
       <description>
 
 &lt;h2 id=&#34;learning-systems-programming-rust-vs-c-part-1:1a8da960fa9208a0f2ad7fc138674785&#34;&gt;Learning Systems Programming: Rust vs C (Part 1)&lt;/h2&gt;
 
-&lt;p&gt;I&amp;rsquo;ve been wanting to learn systems programming for a long time now. After reading about Rust every-other-day on Hacker News I&amp;rsquo;ve been dying to dive into it but have found that most tutorials online get kind of tough to follow fot those of us without a C/C++ background. So, I found a copy of &lt;a href=&#34;http://www.amazon.com/Programming-Language-Brian-W-Kernighan/dp/0131103628&#34;&gt;The C Programming Language&lt;/a&gt; on Amazon for 4 bucks and will be learning both C and Rust at the same time by doing the excercises in Kernighan &amp;amp; Ritchie&amp;rsquo;s highly praised 2nd edititon book in C and Rust side by side.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been wanting to learn systems programming for a long time now. After reading about Rust every-other-day on Hacker News I&amp;rsquo;ve been dying to dive into it but have found that most tutorials online get kind of tough to follow for those of us without a C/C++ background. So, I found a copy of &lt;a href=&#34;http://www.amazon.com/Programming-Language-Brian-W-Kernighan/dp/0131103628&#34;&gt;The C Programming Language&lt;/a&gt; on Amazon for 15 bucks and will be learning both C and Rust at the same time by doing the exercises in Kernighan &amp;amp; Ritchie&amp;rsquo;s highly praised 2nd edition book in C and Rust side by side. One of the ways I learn best is to teach. Given that I am learning as I&amp;rsquo;m going, don&amp;rsquo;t take everything here as the gospel. Having said that, I&amp;rsquo;ll do my best to accurately describe the material. After all, that&amp;rsquo;s another great benefit of teaching while you learn: you have to make sure you are confident in your understanding of a topic before teaching it as fact.&lt;/p&gt;
 
 &lt;p&gt;All of the code can be found on &lt;a href=&#34;https://github.com/oldsjam/learnsystems&#34;&gt;https://github.com/oldsjam/learnsystems&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;chapter-one:1a8da960fa9208a0f2ad7fc138674785&#34;&gt;Chapter One&lt;/h3&gt;
+&lt;h3 id=&#34;1-1-getting-started:1a8da960fa9208a0f2ad7fc138674785&#34;&gt;1.1 Getting Started&lt;/h3&gt;
 
-&lt;h4 id=&#34;1-1:1a8da960fa9208a0f2ad7fc138674785&#34;&gt;1-1&lt;/h4&gt;
+&lt;p&gt;Right off the bat, I do like rust&amp;rsquo;s println! macro which saves you from an ugly &amp;ldquo;\n&amp;rdquo; in your code. The standard library in C is opt-in while it is in scope by default in Rust. Not a huge deal but its nice to not have to explicitly include it in practically every program you write. I think it&amp;rsquo;s strange to have printing done by a macro, simply because I&amp;rsquo;ve never seen it done that way before. Looking forward to reading more about macros and the Rust team&amp;rsquo;s reasoning behind going that route vs a function/method.&lt;/p&gt;
 
-&lt;p&gt;Not much to say here, I do like rust&amp;rsquo;s println! macro which saves you from an ugly &amp;ldquo;\n&amp;rdquo; in your code.&lt;/p&gt;
-
-&lt;p&gt;1-1.c&lt;/p&gt;
+&lt;p&gt;example.c&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
 
@@ -38,21 +37,115 @@ main() {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;1-1.rs&lt;/p&gt;
+&lt;p&gt;example.rs&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-rust&#34;&gt;fn main() {
   println!(&amp;quot;hello, world&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;1-2-variables-and-arithmetic-expressions:1a8da960fa9208a0f2ad7fc138674785&#34;&gt;1.2 Variables and Arithmetic Expressions&lt;/h3&gt;
+
+&lt;p&gt;We get to try out some fancy features of the Rust language here with a pattern variable binding:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-rust&#34;&gt;let (lower, upper, step) = (0.0, 300.0, 20.0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and by describing the fahr variable as mutable with the mut keyword. By default, everything in Rust is immutable and if, for example you&amp;rsquo;d like a variable to be able to be changed in the future without reassigning it with let, you have to use the mut keyword. I like secure-by-default and it&amp;rsquo;s not a huge inconvenience so this is great. I found the formatting this exercise a little tough in Rust. Firstly, I had to use a macro to get the float numbers to only show 1 decimal place:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-rust&#34;&gt;format!(&amp;quot;{:.*}&amp;quot;, 1, ((5.0/9.0) * (fahr-32.0)));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, I had to read more on Rust&amp;rsquo;s formatting syntax to get it to give me the same right-justified, tabbed output as we had in C. At first pass, I think the C syntax here make more sense but I can see Rust&amp;rsquo;s formatting syntax being more powerful in the long run. By the way, it&amp;rsquo;s really nice not to have to a) declare variables in advance as we had to in C, and b) Rust&amp;rsquo;s type-inference lets us not have to worry manually describing the types of our variables either (at least not yet).&lt;/p&gt;
+
+&lt;p&gt;main.c&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+main() {
+    float fahr, celsius;
+    int lower, upper, step;
+
+    lower = 0;
+    upper = 300;
+    step = 20;
+
+    fahr = lower;
+    while (fahr &amp;lt;= upper) {
+        celsius = (5.0/9.0) * (fahr-32.0);
+        printf(&amp;quot;%3.0f %6.1f\n&amp;quot;, fahr, celsius);
+        fahr = fahr + step;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;main.rs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-rust&#34;&gt;fn main() {
+    let (lower, upper, step) = (0.0, 300.0, 20.0);
+
+    let mut fahr = lower;
+    while fahr &amp;lt;= upper {
+        let celsius = format!(&amp;quot;{:.*}&amp;quot;, 1, ((5.0/9.0) * (fahr-32.0)));
+        println!(&amp;quot;{:&amp;gt;3} {:&amp;gt;6}&amp;quot;, fahr, celsius);
+        fahr += step;
+        
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;1-3-the-for-statement:1a8da960fa9208a0f2ad7fc138674785&#34;&gt;1.3 The For Statement&lt;/h3&gt;
+
+&lt;p&gt;This part got a little interesting because I had to switch to Rust nightly just to be able to change the step size of the for loop iterator. After getting all that sorted, and adding #![feature(step_by)] to my code I was able to get the equivalent output as the C exercise using only a for loop. This also required me to manually cast fahr as a float in order to perform the Fahrenheit to Celsius conversion.&lt;/p&gt;
+
+&lt;p&gt;main.c&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+main() {
+    int fahr;
+
+    printf(&amp;quot;Fahrenheit\tCelsius\n&amp;quot;);
+    for (fahr = 0; fahr &amp;lt;= 300; fahr = fahr + 20) {
+        printf(&amp;quot;%3d %18.1f\n&amp;quot;, fahr, (5.0/9.0) * (fahr-32.0));
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;main.rs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-rust&#34;&gt;#![feature(step_by)]
+
+fn main() {
+    println!(&amp;quot;Fahrenheit {:^18}&amp;quot;, &amp;quot;Celsius&amp;quot;);
+    for fahr in (0..300).step_by(20) {
+        println!(&amp;quot;{:&amp;gt;3} {:&amp;gt;18}&amp;quot;, fahr, format!(&amp;quot;{:.*}&amp;quot;, 1, ((5.0/9.0) * (fahr as f64-32.0))));
+    }
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
     <item>
+      <title>about</title>
+      <link>/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/about/</guid>
+      <description>
+
+&lt;h2 id=&#34;biography:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Biography&lt;/h2&gt;
+
+&lt;p&gt;James Olds is one of the brightest brogrammers the world has ever seen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>bash on ubuntu on windows</title>
-      <link>https://blog.jamesolds.me/post/bash-ubuntu-windows/</link>
+      <link>/post/bash-ubuntu-windows/</link>
       <pubDate>Fri, 08 Apr 2016 12:55:46 -0500</pubDate>
       
-      <guid>https://blog.jamesolds.me/post/bash-ubuntu-windows/</guid>
+      <guid>/post/bash-ubuntu-windows/</guid>
       <description>
 
 &lt;h2 id=&#34;bash-on-ubuntu-on-windows-windows-subsystem-for-linux:e5d0ed4ac8984e594b9261682760002a&#34;&gt;&lt;strong&gt;Bash On Ubuntu On Windows - Windows Subsystem for Linux&lt;/strong&gt;&lt;/h2&gt;
