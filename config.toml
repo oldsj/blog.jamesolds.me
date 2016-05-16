@@ -84,6 +84,11 @@ disqusShortname = "jamesolds"
         icon_pack = "fa"
         link = "//github.com/oldsjam"
 
+    [[params.social]]
+        icon = "linkedin"
+        icon_pack = "fa"
+        link = "//linkedin.com/jamesrolds"
+
 
 # Navigation Links
 #
