@@ -44,7 +44,7 @@ format!("{:.*}", 1, ((5.0/9.0) * (fahr-32.0)));
 ```
 Then, I had to read more on Rust's formatting syntax to get it to give me the same right-justified, tabbed output as we had in C. At first pass, I think the C syntax here make more sense but I can see Rust's formatting syntax being more powerful in the long run. By the way, it's really nice not to have to a) declare variables in advance as we had to in C, and b) Rust's type-inference lets us not have to worry manually describing the types of our variables either (at least not yet).
 
-main.c
+example.c
 ```c
 #include <stdio.h>
 
@@ -65,7 +65,7 @@ main() {
 }
 ```
 
-main.rs
+example.rs
 ```rust
 fn main() {
 	let (lower, upper, step) = (0.0, 300.0, 20.0);
@@ -75,15 +75,17 @@ fn main() {
 		let celsius = format!("{:.*}", 1, ((5.0/9.0) * (fahr-32.0)));
 		println!("{:>3} {:>6}", fahr, celsius);
 		fahr += step;
-		
+
 	}
 }
 ```
+
+
 ### 1.3 The For Statement
 
 This part got a little interesting because I had to switch to Rust nightly just to be able to change the step size of the for loop iterator. After getting all that sorted, and adding #![feature(step_by)] to my code I was able to get the equivalent output as the C exercise using only a for loop. This also required me to manually cast fahr as a float in order to perform the Fahrenheit to Celsius conversion.
 
-main.c
+example.c
 ```c
 #include <stdio.h>
 
@@ -97,7 +99,7 @@ main() {
 }
 ```
 
-main.rs
+example.rs
 ```rust
 #![feature(step_by)]
 
@@ -105,6 +107,43 @@ fn main() {
 	println!("Fahrenheit {:^18}", "Celsius");
 	for fahr in (0..300).step_by(20) {
 		println!("{:>3} {:>18}", fahr, format!("{:.*}", 1, ((5.0/9.0) * (fahr as f64-32.0))));
+	}
+}
+```
+### 1.4 Symbolic Constants
+Pretty simple stuff here, we're just defining constants for the numbers 0, 20, and 300 so that it's more obvious what the numbers are for, especially since they should not need to be changed. In rust, we have to manually define a constant's type with the following syntax:
+```rust
+const LOWER: i32 = 0;
+```
+The constant's name is LOWER, and i32 is it's type. Rust is a strongly typed language, essentially meaning that all data must have a type in order to compile. This provides the compiler with the information it needs in order to make sure unsafe operations aren't happening. For example, we defined LOWER as an i32, meaning a 32bit integer. If the compiler did not care about LOWER's type, and we were to perform an operation on it that caused it to be larger than 2,147,483,647 (2^32 in two's compliment), it would cause "undefined behavior" and almost certainly crash. Rust is great because it stops these types of problems while providing type inference so that you as the programmer do not have to explicitly define the type  in most cases.
+
+example.c
+```c
+#include <stdio.h>
+
+#define    LOWER    0
+#define    UPPER    300
+#define    STEP     20
+
+main() {
+    int fahr;
+
+    for (fahr = LOWER; fahr <= UPPER; fahr+= STEP)
+        printf("%3d %6.1f\n", fahr, (5.0/9.0)*(fahr-32));
+}
+```
+
+example.rs
+```rust
+#![feature(step_by)]
+
+const LOWER: i32 = 2147483648;
+const UPPER: i32 = 300;
+const STEP: i32 = 20;
+
+fn main() {
+	for fahr in (LOWER..UPPER).step_by(STEP) {
+		println!("{:>3} {:>6}", fahr, format!("{:.*}", 1, ((5.0/9.0) * (fahr as f64-32.0))));
 	}
 }
 ```
