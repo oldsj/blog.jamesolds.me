@@ -1,4 +1,5 @@
 +++
+draft = true
 date = "2016-05-28T11:52:55-05:00"
 tags = []
 title = "aws"
