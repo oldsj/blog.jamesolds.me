@@ -17,9 +17,9 @@ pygmentsStyle = "monokai"
 
 [params]
     name = "James Olds"
-    role = "Computer Science Student"
-    organization = "University of Maryland University College"
-    email = "blog@jamesolds.me"
+    role = "Sr Network Administrator"
+    organization = "Supreme Court of Oklahoma"
+    email = "oldsj |> protonmail"
     address = "Oklahoma City, OK"
 
     # Date format (refer to Go's formatting options)
@@ -36,7 +36,6 @@ pygmentsStyle = "monokai"
     [[params.certification]]
         cert = "CCNP Routing and Switching"
         organization = "Cisco"
-
 
     [[params.certification]]
         cert = "CCNA Security"
