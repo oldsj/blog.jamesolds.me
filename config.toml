@@ -71,7 +71,7 @@ pygmentsStyle = "monokai"
     [[params.social]]
         icon = "envelope"
         icon_pack = "fa"
-        link = "mailto:blog@jamesolds.me"
+        link = "mailto:oldsj|>protonmail"
 
     [[params.social]]
         icon = "twitter"
