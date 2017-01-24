@@ -2,7 +2,7 @@
 tags = [ "CCIE", "Lab"
 ]
 date = "2017-01-22T21:14:02-06:00"
-title = "GNS3 VM On Hypver-V"
+title = "GNS3 VM On Hyper-V"
 
 +++
 
@@ -10,7 +10,7 @@ With Windows 10 Pro, you have the option of using a Windows native hypervisor ca
 don't have to pay the high price of something like VMWare Workstation while still getting great performance (maybe even 
 better than VMWare.) I set it up with the default option of using Dynamic Memory so that it won't use much ram until you
 start adding a lot of routers and switches and it will scale up the VM's available RAM as needed. I simulated the INE CCIE R/S topology 
-on it with 20 routers and 5 switches, and sat at around 6GB memory comsumption of the VM and my total system ram usage right up at 7.6GB
+on it with 20 routers and 5 switches, and sat at around 6GB memory consumption of the VM and my total system ram usage right up at 7.6GB
 of 8GB total. I didn't notice any issues at all because of the high ram usage though, and I think that Hyper-V will scale the VM back and 
 give more to the host if it needs it. Overall if feels much better than using VM Player which always opened up a window when starting GNS3. 
 With this option, you just set Hyper-V to boot your VM automatically on reboot of the host and it will always be in the background, available 
@@ -42,7 +42,7 @@ Password: gns3
     - Connect it to GNS3 VM Switch
     - Create a virtual hard disk - I used 20GB
     - Install an operating system from a bootable image file
-        - Browse to where you downloaded your ubuntu server iso
+        - Browse to where you downloaded your Ubuntu server iso
 3. Change secure boot to Microsoft UEFI Certificate Authority and Set Auto Boot
     - VM Settings -> Security -> Template -> Microsoft UEFI Certificate Authority
     - VM Settings -> Automatic Start Action
@@ -53,7 +53,7 @@ Password: gns3
     - Enter 5x for US layout
     - Hostname: gns3vm
     - Full name is optional
-    - Usernane: gns3
+    - Username: gns3
     - Password: gns3
     - Use weak password: yes (up to you obviously)
     - Encrypt: no
@@ -109,11 +109,11 @@ Password: gns3
         - enable and start the gns3 service
             - systemctl enable gns3
             - systemctl start gns3
-            - systemctl status gns3 to verify it's active (runnig)
+            - systemctl status gns3 to verify it's active (running)
 6. Configure GNS3 to Point to Your Remote Server
     - Edit -> Preferences -> Server -> Remote Servers
         - Add, just update the Host to the IP of your VM that you reserved earlier
-    - When you go to add IOU devices, chose remote computer and run on the IP you chose.
+    - When you go to add IOU devices, choose remote computer and run on the IP you chose.
     - If you have issues with your iourc just paste it manually in ~/.iourc under your gns3 account
 
 
