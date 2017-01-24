@@ -1,5 +1,5 @@
 +++
-tags = [ "CCIE"
+tags = [ "CCIE", "Lab"
 ]
 date = "2017-01-22T21:14:02-06:00"
 title = "GNS3 VM On Hypver-V"
@@ -16,25 +16,25 @@ give more to the host if it needs it. Overall if feels much better than using VM
 With this option, you just set Hyper-V to boot your VM automatically on reboot of the host and it will always be in the background, available 
 for you to use as a remote sever from GNS3. 
 
-## Download
+### Download
 Username: gns3
 Password: gns3
-()
+[Hyper-V Image](https://drive.google.com/file/d/0BzbEOs7IPJamMkNZdHo4S09fUEU/view?usp=sharing)
 
-## What it looks like running INE's full v5 topology
+### What it looks like running INE's full v5 topology
 
-![gns3-hyverv-memory](/static/images/gns3-hyperv-memory.png)
+![gns3-hyverv-memory](/images/gns3-hyperv-memory-thumb.png)
 
-## How-to build your own
+### How-to build your own
 
-0) Download [Ubuntu 16.04 Server](https://www.ubuntu.com/download/server/thank-you?country=US&version=16.04.1&architecture=amd64)
-1) Create a Virtual Switch
+0. Download [Ubuntu 16.04 Server](https://www.ubuntu.com/download/server/thank-you?country=US&version=16.04.1&architecture=amd64)
+1. Create a Virtual Switch
     - Action -> Virtual Switch Manager
     - Create Virtual Switch
         - Chose External so you can access it from other computers on your network and the internet
     - Name it GNS3 VM Switch
     - Bind it to whatever interface gets to the internet
-2) Make a new VM
+2. Make a New VM
     - Action -> New -> Virtual Machine
     - Name -> GNS3 VM
     - Choose Gen 2
@@ -43,9 +43,11 @@ Password: gns3
     - Create a virtual hard disk - I used 20GB
     - Install an operating system from a bootable image file
         - Browse to where you downloaded your ubuntu server iso
-3) Change secure boot to Microsoft UEFI Certificate Authority
+3. Change secure boot to Microsoft UEFI Certificate Authority and Set Auto Boot
     - VM Settings -> Security -> Template -> Microsoft UEFI Certificate Authority
-4) Install Ubuntu
+    - VM Settings -> Automatic Start Action
+        - Always start this virtual machine automatically
+4. Install Ubuntu
     - Connect and power on the VM
     - Install Ubuntu Server
     - Enter 5x for US layout
@@ -67,25 +69,51 @@ Password: gns3
     - Install security updates automatically
     - Scroll down and choose OpenSSH server with the space bar
     - Installation Complete - Continue
-5) Configure Ubuntu and Install GNS3 Server
-    - login with gns3/gns3
+5. Configure Ubuntu and Install GNS3 Server
+    - Login with gns3/gns3
     - Get the mac address and create a static entry in your dhcp server
-        - ip add - get the mac of eth0
+        ~~~bash
+        ip add
+        ~~~ 
+
+        - get the mac of eth0
         - reboot to get new lease
-    - you can now ssh to your VM on the address you reserved
-    - sudo apt update; sudo apt upgrade
+
+        ~~~bash
+        sudo reboot
+        ~~~
+    - You can now ssh to your VM on the address you reserved
+        ~~~bash
+        sudo apt update; sudo apt upgrade
+        ~~~
     - Its usually worth a restart after your first upgrade to get the latest kernel
-        - sudo reboot
+        ~~~bash
+        sudo reboot
+        ~~~
     - Install GNS3
-        - sudo -s
-        - add-apt-repository ppa:gns3/ppa
-        - apt update
-        - apt install gns3-server
-        - apt install gns3-iou
-        - nano /etc/systemd/system/gns3.service
-            - paste this in 
+        ~~~bash
+        sudo -s
+
+        add-apt-repository ppa:gns3/ppa
+        apt update
+        apt install gns3-server
+        apt install gns3-iou
+        ~~~
+
+        ~~~bash
+        nano /etc/systemd/system/gns3.service
+        ~~~
+
+        - [Paste this in](/static/gns3.service)
+        - ctrl+o, ctrl+x to save and exit 
         - enable and start the gns3 service
             - systemctl enable gns3
             - systemctl start gns3
             - systemctl status gns3 to verify it's active (runnig)
+6. Configure GNS3 to Point to Your Remote Server
+    - Edit -> Preferences -> Server -> Remote Servers
+        - Add, just update the Host to the IP of your VM that you reserved earlier
+    - When you go to add IOU devices, chose remote computer and run on the IP you chose.
+    - If you have issues with your iourc just paste it manually in ~/.iourc under your gns3 account
+
 
