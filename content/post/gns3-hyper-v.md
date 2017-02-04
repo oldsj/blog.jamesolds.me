@@ -12,9 +12,7 @@ start adding a lot of routers and switches and it will scale up the VM's availab
 on it with 20 routers and 5 switches, and sat at around 6GB memory consumption of the VM and my total system ram usage right up at 7.6GB
 of 8GB total. I didn't notice any issues at all though, and I think that Hyper-V will scale the VM back and 
 give more to the host if it needs it. Overall it feels much better than using VMWare Player which always opened up a window when starting GNS3. 
-With this option, you just set Hyper-V to boot your VM automatically when you boot your desktop and it will always be in the background, available 
-
-for you to use as a remote sever from GNS3. 
+With this option, you just set Hyper-V to boot your VM automatically when you boot your desktop and it will always be in the background, available for you to use as a remote sever from GNS3. 
 
 If you give your VM a static IP, you can even setup a VPN so you can remotely access the lab from anywhere you have the internet.
 
