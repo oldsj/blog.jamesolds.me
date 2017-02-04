@@ -1,7 +1,7 @@
 +++
 date = "2016-04-08T12:55:46-05:00"
-title = "bash on ubuntu on windows"
-tags = [ "OS" ]
+title = "Bash on Ubuntu on Windows"
+tags = [ "windows" ]
 +++
 
 In the latest test build of Windows 10 (build 14316), Microsoft introduced

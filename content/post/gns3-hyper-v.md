@@ -1,29 +1,36 @@
 +++
-tags = [ "CCIE", "Lab"
+tags = [ "ccie", "lab"
 ]
 date = "2017-01-22T21:14:02-06:00"
 title = "GNS3 VM On Hyper-V"
 
 +++
 
-With Windows 10 Pro, you have the option of using a Windows native hypervisor called Hyper-V. It's included with 10 Pro so you
-don't have to pay the high price of something like VMWare Workstation while still getting great performance (maybe even 
-better than VMWare.) I set it up with the default option of using Dynamic Memory so that it won't use much ram until you
+With Windows 10 Pro, you have the option of using a Windows native hypervisor called Hyper-V. It's included with the OS so you
+don't have to pay the high price of something like VMWare Workstation while still getting great performance. I set it up with the default option of using Dynamic Memory so that it won't use much ram until you
 start adding a lot of routers and switches and it will scale up the VM's available RAM as needed. I simulated the INE CCIE R/S topology 
 on it with 20 routers and 5 switches, and sat at around 6GB memory consumption of the VM and my total system ram usage right up at 7.6GB
-of 8GB total. I didn't notice any issues at all because of the high ram usage though, and I think that Hyper-V will scale the VM back and 
-give more to the host if it needs it. Overall if feels much better than using VM Player which always opened up a window when starting GNS3. 
-With this option, you just set Hyper-V to boot your VM automatically on reboot of the host and it will always be in the background, available 
+of 8GB total. I didn't notice any issues at all though, and I think that Hyper-V will scale the VM back and 
+give more to the host if it needs it. Overall it feels much better than using VMWare Player which always opened up a window when starting GNS3. 
+With this option, you just set Hyper-V to boot your VM automatically when you boot your desktop and it will always be in the background, available 
+
 for you to use as a remote sever from GNS3. 
 
-### Download
+If you give your VM a static IP, you can even setup a VPN so you can remotely access the lab from anywhere you have the internet.
+
+### What it looks like running INE's full CCIE RS v5 topology
+{{< img src="/images/gns3-hyperv-memory.png" title="GNS3 with INE Full Scale" >}}
+
+### Requirements
+- Windows 10 Pro / Education / Enterprise
+- Hyper-V feature enabled
+- 8GB ram
+
+### Just give me the VHDX
 Username: gns3
 Password: gns3
+
 [Hyper-V Image](https://drive.google.com/file/d/0BzbEOs7IPJamMkNZdHo4S09fUEU/view?usp=sharing)
-
-### What it looks like running INE's full v5 topology
-
-![gns3-hyverv-memory](/images/gns3-hyperv-memory-thumb.png)
 
 ### How-to build your own
 

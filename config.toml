@@ -18,9 +18,9 @@ pygmentsStyle = "monokai"
 [params]
     name = "James Olds"
     role = "Sr Network Administrator"
-    organization = "Supreme Court of Oklahoma"
-    email = "oldsj |> protonmail"
-    address = "Oklahoma City, OK"
+    # organization = "Supreme Court of Oklahoma"
+    email = "blog |> oldsmail |> com"
+    # address = "Oklahoma City, OK"
 
     # Date format (refer to Go's formatting options)
     #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
@@ -53,9 +53,9 @@ pygmentsStyle = "monokai"
         year = "2015 - 2018"
 
     [[params.education]]
-        course = "BSc in Computer Science"
+        course = "Software Development and Security"
         institution = "University of Maryland University College"
-        year = "Expected 2017"
+        year = "Expected 2018"
 
     # Social/Academic Networking
     #
@@ -71,7 +71,7 @@ pygmentsStyle = "monokai"
     [[params.social]]
         icon = "envelope"
         icon_pack = "fa"
-        link = "mailto:oldsj|>protonmail"
+        link = "mailto:blog|>oldsmail|>com"
 
     [[params.social]]
         icon = "twitter"
