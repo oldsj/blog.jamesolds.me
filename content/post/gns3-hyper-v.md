@@ -19,7 +19,7 @@ for you to use as a remote sever from GNS3.
 If you give your VM a static IP, you can even setup a VPN so you can remotely access the lab from anywhere you have the internet.
 
 ### What it looks like running INE's full CCIE RS v5 topology
-{{< img src="/images/gns3-hyperv-memory.png" title="GNS3 with INE Full Scale" >}}
+![gns3-hyverv-memory](/images/gns3-hyperv-memory-thumb.png)
 
 ### Requirements
 - Windows 10 Pro / Education / Enterprise
