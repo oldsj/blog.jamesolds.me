@@ -55,7 +55,7 @@ pygmentsStyle = "monokai"
     [[params.education]]
         course = "Software Development and Security"
         institution = "University of Maryland University College"
-        year = "Expected 2018"
+        year = "Ex 2018"
 
     # Social/Academic Networking
     #
