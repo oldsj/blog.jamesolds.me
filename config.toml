@@ -12,7 +12,7 @@ pygmentsStyle = "monokai"
 # disqusShortname = "jamesolds"
 
 # Enable analytics by entering your Google Analytics tracking ID
-# googleAnalytics = ""
+googleAnalytics = "UA-91478354-1"
 
 
 [params]
