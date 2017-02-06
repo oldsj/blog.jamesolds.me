@@ -10,6 +10,17 @@
     {{ with .Site.Params.name }}<meta name="author" content="{{ . }}" />{{ end }}
     {{ with .Site.Params.role }}<meta name="description" content="{{ . }}" />{{ end }}
 
+    {{ with .Site.GoogleAnalytics }}
+    <!-- Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '{{ . }}', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    {{ end }}
+
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.min.css" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.min.css" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css" />

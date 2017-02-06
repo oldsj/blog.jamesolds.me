@@ -2,7 +2,7 @@
 baseurl = "https://blog.jamesolds.me/"
 
 title = "Finding What Works"
-copyright = "&copy; 2016 James Olds"
+copyright = "&copy; 2017 James Olds"
 languageCode = "en-us"
 theme = "academic"
 pygmentsUseClasses = false
@@ -12,7 +12,7 @@ pygmentsStyle = "monokai"
 disqusShortname = "jamesolds"
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = "UA-91478354-1"
+googleAnalytics = "UA-91500275-1"
 
 
 [params]
