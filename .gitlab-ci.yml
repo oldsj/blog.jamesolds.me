@@ -1,4 +1,7 @@
-image: publysher/hugo
+image: monachus/hugo
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
 
 pages:
   script:
