@@ -2,7 +2,7 @@
 baseurl = "https://blog.jamesolds.me/"
 
 title = "Finding What Works"
-copyright = "&copy; 2017 James Olds"
+copyright = "&copy; 2018 James Olds"
 languageCode = "en-us"
 theme = "academic"
 pygmentsUseClasses = false
@@ -34,8 +34,8 @@ googleAnalytics = "UA-1712606-2"
     custom_js  = ["highlight.pack.js"]
 
     [[params.certification]]
-        cert = "AWS Solutions Architect - Associate"
-        organization = "Amazon"
+        cert = "AWS Solutions Architect"
+        organization = "Amazon - Associate"
 
 
     [[params.certification]]
@@ -53,8 +53,9 @@ googleAnalytics = "UA-1712606-2"
 
 
     [[params.education]]
-        course = "Software Development and Security"
+        course = "BS - Software Development and Security"
         institution = "University of Maryland University College"
+        year = "2018"
 
     # Social/Academic Networking
     #
