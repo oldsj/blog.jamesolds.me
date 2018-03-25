@@ -17,7 +17,7 @@ googleAnalytics = "UA-1712606-2"
 
 [params]
     name = "James Olds"
-    role = "Sr Network Administrator"
+    role = "Devops Enthusiast"
     # organization = "Supreme Court of Oklahoma"
     email = "blog |> oldsmail |> com"
     # address = "Oklahoma City, OK"
@@ -34,28 +34,27 @@ googleAnalytics = "UA-1712606-2"
     custom_js  = ["highlight.pack.js"]
 
     [[params.certification]]
+        cert = "AWS Solutions Architect - Associate"
+        organization = "Amazon"
+
+
+    [[params.certification]]
         cert = "CCNP Routing and Switching"
         organization = "Cisco"
 
     [[params.certification]]
         cert = "CCNA Security"
         organization = "Cisco"
-        year = "2015 - 2018"
+
 
     [[params.certification]]
-        cert = "ITIL Foundation"
+        cert = "ITIL v3 Foundation"
         organization = "EXIN"
-        year = "2015"
 
-    [[params.certification]]
-        cert = "CASP"
-        organization = "CompTIA"
-        year = "2015 - 2018"
 
     [[params.education]]
         course = "Software Development and Security"
         institution = "University of Maryland University College"
-        year = "Ex 2018"
 
     # Social/Academic Networking
     #
