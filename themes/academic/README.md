@@ -1,151 +1,130 @@
-# Hugo Academic
+<p align="center"><a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener"><img src="https://sourcethemes.com/academic/img/logo_200px.png" alt="Academic logo"></a></p>
 
-A personal academic website theme for [Hugo](https://gohugo.io).
+# Academic: the website designer for [Hugo](https://gohugo.io)
 
-[![Screenshot](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/screenshot.png)](https://github.com/gcushen/hugo-academic/)
+**Academic** makes it easy to create a beautiful website for free using Markdown. Customize anything on your site with widgets, themes, and language packs.
 
-Key features:
+Follow our easy [step by step guide](https://sourcethemes.com/academic/docs/install/) to learn how to build your own free website with Academic. [Check out the personal demo](https://themes.gohugo.io/theme/academic/) or the [business demo](https://sourcethemes.com/academic/) of what you'll get in less than 10 minutes.
 
-- Designed for academic staff, students, or general personal use
-- Includes Biography, Publications, Projects, News/Blog, Teaching, and Contact sections
-- Write in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
-- Academic linking (Scholar etc.), Google Analytics, and Disqus comments
+- [View the documentation](https://sourcethemes.com/academic/docs/)
+- [Ask a question](http://discuss.gohugo.io/)
+- [Request a feature or report a bug](https://github.com/gcushen/hugo-academic/issues)
+- Updating? View the [Update Guide](https://sourcethemes.com/academic/docs/update/) and [Release Notes](https://sourcethemes.com/academic/updates/)
+- Support development of Academic:
+  - [Donate a coffee](https://paypal.me/cushen)
+  - [Become a backer on Patreon](https://www.patreon.com/cushen)
+  - [Decorate your laptop or journal with an Academic sticker](https://www.redbubble.com/people/neutreno/works/34387919-academic)
+  - [Wear the T-shirt](https://academic.threadless.com/)
+
+[![Screenshot](https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png)](https://github.com/gcushen/hugo-academic/)
+
+**Key features:**
+
+- Easily manage various content including homepage, blog posts, publications, talks, slides, and projects
+- Extensible via **color themes** and **widgets/plugins**
+- Write in [Markdown](https://sourcethemes.com/academic/docs/writing-markdown-latex/) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
+- Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
 - Responsive and mobile friendly
 - Simple and refreshing one page design
-- Easy to customize
+- Multilingual and easy to customize
 
-## Installation
+## Color Themes
 
-1. Install [Hugo](https://gohugo.io/overview/installing/) and create a new website:
+Academic is available in different color themes and font themes.
 
-        hugo new site my_website
-        cd my_website
+| `default` | `ocean` | `forest` | `dark` |
+| --- | --- | --- | --- |
+| ![default theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-default.png) | ![ocean theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-ocean.png) | ![forest theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-forest.png) | ![dark theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png) |
 
-2. Install Academic theme with `git`:
+| `apogee` | `1950s` | `coffee` | `cupcake` |
+| --- | --- | --- | --- |
+| ![apogee theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-apogee.png) | ![1950s theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-1950s.png) | ![coffee theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-coffee-playfair.png) | ![cupcake theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-cupcake.png) |
 
-        git clone git@github.com:gcushen/hugo-academic.git themes/academic
+## Ecosystem
 
-    Or alternatively, install by downloading from [Github](https://github.com/gcushen/hugo-academic/) into a `themes/academic` folder within your Hugo website.
+* **[Academic Admin](https://github.com/sourcethemes/academic-admin):** An admin tool to import publications from BibTeX or import assets for an offline site
+* **[Academic Scripts](https://github.com/sourcethemes/academic-scripts):** Scripts to help migrate content to new versions of Academic
+* **[Project KickstartR](https://github.com/sourcethemes/project-kickstart-r):** Create a Project, Team, or Conference **Landing Page** and **Knowledge Sharing Platform** with (R) Markdown
 
-3. If you are creating a new website, copy the contents of the `exampleSite` folder to your website root folder, overwriting existing files if necessary. The `exampleSite` folder contains an example config file and content to help you get started.
+## Install
 
-4. Start the Hugo server from your website root folder:
+You can choose from one of the following four methods to install:
 
-        hugo server --watch
+* one-click install using your web browser (recommended)
+* install on your computer using Git with the Command Prompt/Terminal app
+* install on your computer by downloading the ZIP files
+* install on your computer with RStudio
 
-    Now you can go to [localhost:1313](http://localhost:1313) and your new Academic themed website should appear.
+### Quick install using your web browser
 
-5. Customize your website (see next section), build it by running `hugo`, and deploy it by copying the `public/` directory (by FTP, Rsync, git push, etc.) to your production web server.
+1. [Install Academic with Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart)
+    * Netlify will provide you with a customizable URL to access your new site
+2. On GitHub, go to your newly created `academic-kickstart` repository and edit `config.toml` to personalize your site. Shortly after saving the file, your site will automatically update
+3. Read the [Quick Start Guide](https://sourcethemes.com/academic/docs/) to learn how to add Markdown content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://themes.gohugo.io/theme/academic/)
 
-## Getting Started
+### Install with Git
 
-Assuming you created a new website with the example content following the installation steps above, this section explores just a few more steps in order to customize it.
+Prerequisites:
 
-### Configuration
+* [Download and install Git](https://git-scm.com/downloads)
+* [Download and install Hugo](https://gohugo.io/getting-started/installing/#quick-install)
 
-The core parameters for the website can be edited in the `config.toml` configuration file.
+1. [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the *Academic Kickstart* repository and clone your fork with Git: 
 
-As can be seen in the example `config.toml`, the social/academic networking icons and education qualifications are defined as multiples of `[[params.social]]` and `[[params.education]]` respectively. They can be duplicated or deleted as necessary.
+       git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
+    
+    *Note that if you forked Academic Kickstart, the above command should be edited to clone your fork, i.e. replace `sourcethemes` with your GitHub username.*
 
-For deployment, the `baseURL` variable can be changed to match your website URL such as `baseURL = "http://yoursite.org/"`. The example Disqus commenting variable should be cleared (e.g. `disqusShortname = ""`) or set to your own Disqus shortname to enable commenting. To enable Google Analytics, add your tracking code in `config.toml` similarly to `googleAnalytics = "UA-12345678-9"`.
+2. Initialize the theme:
 
-### Introduce yourself with a biography
+       cd My_Website
+       git submodule update --init --recursive
 
-Place a cropped portrait photo named `portrait.jpg` into the `static/img/` folder, overwriting any defaults.
+### Install with ZIP
 
-Edit your biography in the example `content/home/about.md` file. The research interests and qualifications are stored separately as `param` variables in `config.toml`, as can be seen in the example config.
+1. [Download](https://github.com/sourcethemes/academic-kickstart/archive/master.zip) and extract *Academic Kickstart*
+2. [Download](https://github.com/gcushen/hugo-academic/archive/master.zip) and extract the *Academic theme* to the `themes/academic/` folder from the above step
 
-### Create a publication
+### Install with RStudio
 
-To create a new publication:
+[View the guide to installing Academic with RStudio](https://sourcethemes.com/academic/docs/install/#install-with-rstudio)
 
-    hugo new publication/my-paper-name.md
+## Quick start
 
-Then edit the default variables at the top of `content/publication/my-paper-name.md` to include the details of your publication. The `url_` variables (except `url_image`) are used to generate links associated with your publication, such as for viewing PDFs of papers. Here is an example:
+1. If you installed on your computer, view your new website by running the following command:
+      
+       hugo server
 
+    Now visit [localhost:1313](http://localhost:1313) and your new Academic powered website will appear. Otherwise, if using Netlify, they will provide you with your URL.
+           
+2. Read the [Quick Start Guide](https://sourcethemes.com/academic/docs/) to learn how to add Markdown content, customize your site, and deploy it. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://themes.gohugo.io/theme/academic/)
+
+3. Build your site by running the `hugo` command. Then [host it for free using Github Pages](https://georgecushen.com/create-your-website-with-hugo/) or Netlify (refer to the first installation method). Alternatively, copy the generated `public/` directory (by FTP, Rsync, etc.) to your production web server (such as a university's hosting service).
+
+## Updating
+
+Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) to help keep track of updates and check out the [release notes](https://sourcethemes.com/academic/updates) prior to updating your site.
+
+Before updating the framework, it is recommended to make a backup of your entire website directory (or at least your `themes/academic` directory) and record your current version number.
+
+By default, Academic is installed as a Git submodule which can be updated by running the following command:
+
+```bash
+git submodule update --remote --merge
 ```
-+++
-abstract = "An abstract..."
-authors = ["First author's name", "Second author's name"]
-date = "2013-07-01"
-math = false
-publication = "The publishing part of the citation goes here. You may use *Markdown* for italics etc."
-title = "A publication title, such as title of a paper"
-url_code = ""
-url_dataset = ""
-url_image = ""
-url_pdf = "/pdf/my-paper-name.pdf"
-url_project = ""
-url_slides = ""
-url_video = ""
-+++
 
-Further details on your publication can be written here using *Markdown* for formatting. This text will be displayed on the Publication Detail page.
-```
+[Check out the update guide](https://sourcethemes.com/academic/docs/update/) for full instructions and alternative methods.
 
-The `url_` links can either point to local or web content. Associated local publication content, such as PDFs, may be copied to a `/static/pdf/` folder and referenced like `url_pdf = "/pdf/my-paper-name.pdf"`.
-
-You can also associate custom link buttons with the publication by adding the following block(s) within the variable preamble above, which is denoted by `+++`:
-
-```
-[[url_custom]]
-    name = "Custom Link"
-    url = "http://www.example.org"
-```
-
-Note that the `url_image` variable is a placeholder that may be used if you wish to modify the publication list to show thumbnails either from images in your `static/img/` folder (which is deployed as `http://your-URL.com/img/`), or URLs of web images.
-
-### Post an article
-
-To create a blog/news article:
-
-    hugo new post/my-article-name.md
-
-Then edit the newly created file `content/post/my-article-name.md` with your full title and content.
-
-You may use [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to format the content. Furthermore, code highlighting and LaTeX math rendering are supported. To enable LaTeX math rendering for a page, you should include `math = true` in the preamble, as demonstrated in the included example site.
-
-Images may be added to a post by placing them in your `static/img/` folder and referencing them in Markdown such as with `![alt text](/img/my-image.jpg)`.
-
-### Create a project
-
-To create a project:
-
-    hugo new project/my-project-name.md
-
-Then edit the newly created file `content/project/my-project-name.md`. Either you can link the project to an external project website by setting the `external_link = "http://external-project.com"` variable at the top of the file, or you can add content (below the final `+++`) in order to render a project page on your website.
-
-### Add a section to home page
-
-To add a new section to the home page:
-
-    hugo new home/my-section-name.md
-
-Then edit the newly created file `content/home/my-section-name.md` with your section title and content. In the `+++` preamble, you should also increment the `section_id` to ensure it's unique amongst the other sections in `content/home` and you can adjust `weight` variable to change the order within the custom section of the home page.
-
-You may also wish to add a navigation link to the new section. This can be achieved by adding something similar to the following lines to your `config.toml`, where the URL will consist of the first title word in lowercase:
-
-    [[menu.main]]
-        name = "Research"
-        url = "/#research"
-        weight = 10
-
-### Removing content
-
-Generally, to remove content, simply delete the relevant file from your `content/post`, `content/publication`, `content/project`, or `content/home` folder.
-
-Then you can re-build and view the updated website with the `hugo` and `hugo server --watch` commands, respectively.
-
-## Upgrading
-
-Feel free to star the project on [Github](https://github.com/gcushen/hugo-academic/) and monitor the commits for updates.
-
-## Contributing
+## Feedback & Contributing
 
 Please use the [issue tracker](https://github.com/gcushen/hugo-academic/issues) to let me know about any bugs or feature requests, or alternatively make a pull request.
 
+For support, head over to the [Hugo discussion forum](http://discuss.gohugo.io).
+
 ## License
 
-Copyright 2016 [George Cushen](http://www.cushen.me).
+Copyright 2016-present [George Cushen](https://georgecushen.com).
 
 Released under the [MIT](https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md) license.
+
+[![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/hugo-academic/readme?pixel)](https://github.com/igrigorik/ga-beacon)

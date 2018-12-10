@@ -1,18 +1,27 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
-<div class="container">
 
-    {{ $paginator := .Paginate .Data.Pages }}
-    {{ range $paginator.Pages }}
-    <div>
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        {{ partial "article_metadata" (dict "content" . "is_list" 1) }}
-        <p>{{ .Summary }}</p>
-    </div>
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper">
+
+  {{ with .Content }}
+  <div class="article-style" itemprop="articleBody">{{ . }}</div>
+  {{ end }}
+
+  {{ $paginator := .Paginate .Data.Pages }}
+  {{ range $paginator.Pages }}
+    {{ if eq $.Params.list_format 0 }}
+      {{ partial "post_li_simple" . }}
+    {{ else if eq $.Params.list_format 1 }}
+      {{ partial "post_li_detailed" . }}
+    {{ else }}
+      {{ partial "post_li_stream" . }}
     {{ end }}
+  {{ end }}
 
-    {{ partial "pagination" . }}
+  {{ partial "pagination" . }}
 
-    {{ partial "footer_container.html" . }}
 </div>
+{{ partial "footer_container.html" . }}
 {{ partial "footer.html" . }}
