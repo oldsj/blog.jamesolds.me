@@ -5,11 +5,10 @@ authors:
 - jamesolds
 ---
 
-## Problem
 This sprint I have a ticket from the security team to investigate unencrypted snapshots in our AWS account and either encrypt them or delete them if no longer needed.
-In my initial attempt I just used the AWS EC2 console, filtered by "Encryption: Not Encrypted" in the snapshots section, and attempted to delete that list.
+In my initial attempt I just used the AWS web console, filtered by "Encryption: Not Encrypted" in the snapshots section, and attempted to delete that list.
 
-Of course its never that easy: 
+But it would make for a boring story if things were that simple: 
 
 ![](2020-08-13-12-36-45.png)
 
@@ -18,7 +17,7 @@ The snapshots still seem to be in use by AMIs :thinking:
 Since there's over 100 snapshots to work with, doing anything manual here doesn't makes sense.
 
 ## Xonsh
-For the past couple weeks I've been using https://xon.sh as my shell, which is essentially a python interpreter that has nice syntax for running shell commands. So you have all the power of Python right in the familiar shell environment.
+For the past couple weeks I've been using https://xon.sh as my shell, which is essentially a Python interpreter that has nice syntax for running shell commands. So you have all the power of Python right in the familiar shell environment.
 
 I used this command to get all of the unencrypted snapshots from the CLI:
 
@@ -49,9 +48,9 @@ This outputs a JSON list of snapshot objects with output similar to:
 
 So, the task then is to get the AMI id from the unencrypted snapshot's description, compile a list of AMIs, and then deregister that list of AMIs before deleting the snapshots.
 
-My first thought was to just use grep with some regex to return all ami IDs in the output. This won't work though because the tags contain a source_ami AMI id which is not an AMI we want to deregister.
+My first thought was to just use grep with some regex to return all AMI ids in the output. This won't work though because the tags contain a source_ami AMI id which is not an AMI we want to deregister.
 
-Since my shell is just Python, and we're dealing with JSON I can just `import json` and process the `aws` cli output natively with standard python:
+Since my shell is just Python, and we're dealing with JSON I can just `import json` and process the `aws` CLI output natively with standard Python:
 ```
 output = $(aws ec2 describe-snapshots --owner-ids <AWS_ACCOUNT_ID> --filters Name=encrypted,Values=false)
 import json
@@ -68,7 +67,7 @@ for snapshot in snapshots:
      snapshot_descriptions.append(snapshot['Description']) 
 ```
 
-Now we should filter this list of descriptions, extracting all AMI Ids found into a new list. Again since the shell is a python interperetor, we can just `import re` to do regex:
+Now we should filter this list of descriptions, extracting all AMI Ids found into a new list. Again since the shell is a Python interperetor, we can just `import re` to do regex:
 ```
 import re
 pattern = 'ami-[^ ]*'
@@ -88,7 +87,7 @@ for description in snapshot_descriptions:
 
 Awesome!! Now we have a clean list of potential AMIs to deregister. Before bulldozing over the list with a delete operation, let's first take a quick look at each AMI's info for a sanity check so far.
 
-With xonsh, we can interleave python and shell commands so its easy to loop over a cli command using the `@(python_variable)` syntax to access a python variable as a command arg:
+With xonsh, we can interleave Python and shell commands so its easy to loop over a CLI command using the `@(python_variable)` syntax to access a Python variable as a command arg:
 ```
 for ami in snapshot_amis:
     print("Info for AMI: " + ami)
@@ -96,14 +95,14 @@ for ami in snapshot_amis:
 ```
 * Thanks to [this stackoverflow answer](https://stackoverflow.com/a/47420339/13666028) for the @() syntax I wouldn't have found it otherwise.
 
-Phew looks like no EC2 instances are using any of these AMIs. Lets loop over the AMIs again and just take a quick look at the creation date, description, and tags, this time using the `aws` CLI's built-in query option instead of using python's json:
+Phew looks like no EC2 instances are using any of these AMIs. Lets loop over the AMIs again and just take a quick look at the creation date, description, and tags, this time using the `aws` CLI's built-in query option instead of using Python's json:
 ```
 for ami in snapshot_amis:
     print("Info for AMI: " + ami)
     aws ec2 describe-images --image-ids @(ami) --query 'Images[0].{CreationDate:CreationDate,Description:Description,Tags:Tags}'
 ```
 
-Everything seems fine, all of the AMIs were created a year or more ago. Let's deregister!
+Everything seems fine, all of the AMIs were created a year or more ago. Let's deregister
 ```
 for ami in snapshot_amis:
     print("Deregistering AMI: " + ami)
@@ -124,7 +123,7 @@ Let's see if there's any remaining unencrypted snapshots now
 aws ec2 describe-snapshots --owner-ids <AWS_ACCOUNT_ID> --filters Name=encrypted,Values=false 
 ```
 
-Aaaand in my case there were three remaining snapshots, what gives? Turns out the remaining three all were missing an AMI id in their description, so the re.search didn't deregister those snapshot's associated AMIs. 
+Aaaand in my case there were three remaining snapshots, what gives? Turns out the remaining three all were missing an AMI id in their description, so the `re.search` didn't deregister those snapshot's associated AMIs. 
 
 Since its just three snapshots, I'm going to one by one try to delete them from the console to get the AMI id to deregister.
 
@@ -135,3 +134,4 @@ aws ec2 describe-snapshots --owner-ids <AWS_ACCOUNT_ID> --filters Name=encrypted
     "Snapshots": []
 }
 ```
+
