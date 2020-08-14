@@ -7,6 +7,11 @@ title: "GNS3 VM On Hyper-V"
 #   1 = Detailed
 #   2 = Stream
 list_format: 2
+authors:
+- jamesolds
+
+aliases:
+- /tutorial/gns3-hyper-v/
 ---
 
 With Windows 10 Pro, you have the option of using a Windows native hypervisor called Hyper-V. It's included with the OS so you
