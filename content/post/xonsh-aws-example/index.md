@@ -109,7 +109,7 @@ for ami in snapshot_amis:
     aws ec2 deregister-image --image-id @(ami)
 ```
 
-And finally lets see if we can delete those snapshots now:
+And finally let's see if we can delete those snapshots now:
 
 ```
 for snapshot in snapshots:
@@ -118,7 +118,7 @@ for snapshot in snapshots:
     aws ec2 delete-snapshot --snapshot-id @(snapshot_id)
 ```
 
-Let's see if there's any remaining unencrypted snapshots now
+Are there any remaining unencrypted snapshots now?
 ```
 aws ec2 describe-snapshots --owner-ids <AWS_ACCOUNT_ID> --filters Name=encrypted,Values=false 
 ```
@@ -126,6 +126,8 @@ aws ec2 describe-snapshots --owner-ids <AWS_ACCOUNT_ID> --filters Name=encrypted
 Aaaand in my case there were three remaining snapshots, what gives? Turns out the remaining three all were missing an AMI id in their description, so the `re.search` didn't deregister those snapshot's associated AMIs. 
 
 Since its just three snapshots, I'm going to one by one try to delete them from the console to get the AMI id to deregister.
+
+...
 
 All cleaned up now! And without a single line of shell script :tada::tada::tada:
 ```
