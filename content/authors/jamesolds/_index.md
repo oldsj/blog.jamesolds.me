@@ -10,20 +10,20 @@ authors:
 superuser: true
 
 # Role/position
-role: DevOps Engineer
+role: Infrastructure Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: Ad Hoc
-  url: "https://adhoc.team"
+- name: Oden Technologies
+  url: "https://oden.io"
 
 # Short bio (displayed in user profile at end of posts)
-bio: DevOps @ Ad Hoc LLC
+bio: Cloud Infrastructure Engineer / Site Reliability / DevOps
 
 interests:
-- Serverless Architecture
-- Container Orchestration
-- Cloud Native Development
+- Kubernetes
+- Automation + Tooling
+- Meaningful Work
 
 education:
   courses:
@@ -36,9 +36,6 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
-- icon: keybase
-  icon_pack: fab
-  link: "https://keybase.io/oldsj" 
 - icon: linkedin
   icon_pack: fab
   link: https://linkedin.com/in/jamesrolds
@@ -61,4 +58,4 @@ user_groups:
 # - Visitors
 ---
 
-My professional career began in 2009 when I enlisted in the US Navy as an Information Systems Technician, but I have been obsessed with computers ever since the day my parents brought home a our first computer, a Tandy. I have been lucky enough to be able to work on interesting projects with really smart people, picking up network engineering early on in my career. After separating from the Navy, I became very interested in automation and software development while working on my BS in Software Development and Security. Today I apply my knowledge of software engineering towards automating and abstracting infrastructure to help make medicare better for millions of Americans. 
+My professional career began in 2009 when I enlisted in the US Navy as an Information Systems Technician, but I have been obsessed with computers ever since the day my parents brought home a our first computer, a Tandy. I have been lucky enough to be able to work on interesting projects with really smart people, picking up network engineering early on in my career. After separating from the Navy, I became very interested in automation and software development while working on my BS in Software Development and Security. Today I leverage my experience across a diverse range of industries and technologies to automate and abstract infrastructure.
