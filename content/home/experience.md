@@ -23,7 +23,7 @@ date_format = "January 2006"
   company = "Oden Technologies"
   company_url = "https://oden.io"
   location = "Remote"
-  date_start = "2020-11-21"
+  date_start = "2021-11-21"
   date_end = "2022-08-01"
   description = """
 
@@ -40,7 +40,7 @@ date_format = "January 2006"
   company_url = "https://adhoc.team"
   location = "Remote"
   date_start = "2018-06-01"
-  date_end = "2020-11-21"
+  date_end = "2021-11-21"
   description = """
 - Developed a browser based code evaluation environment with Golang on Google Cloud Platform (GCP) using Identity Aware Proxy (IaP) to enable engineers 1-click access to view and run candidate code reducing a major bottleneck in the recruitment pipeline.
 - Migrated Packer / Ansible and ElasticBeanstalk EC2 hosts to ECS Fargate, greatly reducing operational complexity and maintenance requirements while increasing security and deployment velocity.
