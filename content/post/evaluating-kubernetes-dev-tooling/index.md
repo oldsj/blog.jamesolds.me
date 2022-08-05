@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Evaluating Kubernetes Dev Tooling"
+title: "Evaluating Kubernetes Development Tooling"
 subtitle: ""
 summary: ""
 authors:
