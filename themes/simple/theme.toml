@@ -1,0 +1,11 @@
+name = "Simple"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = "A simple, clean Hugo theme"
+tags = ["blog", "minimal", "responsive"]
+features = ["blog"]
+min_version = "0.41.0"
+
+[author]
+  name = "James Olds"
+  homepage = "https://jamesolds.me"

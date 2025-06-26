@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+    <header class="header">
+        <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+        <p>{{ .Site.Params.subtitle | default "A simple blog" }}</p>
+    </header>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="footer">
+        {{ .Site.Copyright | safeHTML }}
+    </footer>
+</body>
+</html>

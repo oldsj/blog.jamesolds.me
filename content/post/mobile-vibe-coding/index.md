@@ -110,6 +110,33 @@ I can actually get real features delivered from my phone. Not just TODO comments
 
 The "vibe" part is real too. There's something satisfying about fixing a bug while sitting in a coffee shop, knowing that your changes are already deployed and your CI is running, all from a device that fits in your pocket.
 
+## Quick Setup Guide
+
+Here's exactly what I'm using to get this working:
+
+**Required Tools:**
+- VM or server with persistent SSH access
+- [Tailscale](https://tailscale.com) for secure networking
+- [Zellij](https://zellij.dev) session manager
+- [Claude Code](https://claude.ai/code) AI pair programming
+
+**Mobile Clients:**
+- [WebSSH](https://webssh.net) (supports iOS dictation)
+- [Termius](https://termius.com) (better UI, no dictation)
+
+**Setup Steps:**
+1. Install Tailscale on your dev machine and phone
+2. Install Zellij: `cargo install zellij` or use package manager
+3. Create the session script above as `~/bin/code`
+4. Make it executable: `chmod +x ~/bin/code`
+5. SSH in and run `./code claude` to start coding
+
+**Dictation Workflow:**
+1. Connect via WebSSH on mobile
+2. Hold dictation button and speak naturally to Claude
+3. View results in mobile browser at dev server URL
+4. Repeat for iterative development
+
 ## Looking Forward
 
 The next logical step is native mobile development environments with better voice integration. AR glasses could eventually provide visual code feedback while maintaining the voice-first interaction model.

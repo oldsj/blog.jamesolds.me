@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="posts">
+    {{ if .Content }}
+        <div class="page-content">
+            {{ .Content }}
+        </div>
+    {{ end }}
+    
+    {{ if .Data.Pages }}
+        <ul class="post-list">
+            {{ range .Data.Pages }}
+                <li class="post-item">
+                    <h2 class="post-title">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </h2>
+                    <div class="post-meta">
+                        {{ .Date.Format "January 2, 2006" }}
+                        {{ if .Params.tags }}
+                            | Tags: 
+                            {{ range $i, $tag := .Params.tags }}
+                                {{ if $i }}, {{ end }}
+                                <a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}/">{{ $tag }}</a>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                    {{ if .Summary }}
+                        <div class="post-summary">{{ .Summary }}</div>
+                    {{ end }}
+                </li>
+            {{ end }}
+        </ul>
+    {{ end }}
+</div>
+{{ end }}
