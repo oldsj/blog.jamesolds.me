@@ -36,15 +36,31 @@ The stack:
 Zapier has an MCP server at mcp.zapier.com that handles integrations. I added Todoist, Gmail, and GitHub through their dashboard instead of having to find or build individual MCP servers for each service.
 
 ```mermaid
-graph LR
-    A[Apple Watch] -->|Call| B[Twilio]
-    B -->|WebSocket| C[Fly.io Bot]
-    C -->|Voice Stream| D[GPT-5 Realtime]
-    C -->|MCP| E[Zapier MCP]
-    E --> F[Todoist]
-    E --> G[Gmail]
-    E --> H[GitHub]
+flowchart LR
+    A[🌎 Apple Watch]
+    B[📞 Twilio]
+    C[🤖 Fly.io Bot]
+    D[🧠 GPT-5 Realtime]
+    E[🔌 Zapier MCP]
+    F[✅ Todoist]
+    G[📧 Gmail]
+    H[💻 GitHub]
+
+    A -->|Call| B
+    B <-->|WebSocket| C
+    C <-->|Voice| D
+    D -->|MCP| E
+    E --> F & G & H
     F -.->|Updates| A
+
+    style A fill:#34495e,stroke:#2c3e50,color:#fff
+    style B fill:#9b59b6,stroke:#8e44ad,color:#fff
+    style C fill:#3498db,stroke:#2980b9,color:#fff
+    style D fill:#e74c3c,stroke:#c0392b,color:#fff
+    style E fill:#f39c12,stroke:#d68910,color:#fff
+    style F fill:#2ecc71,stroke:#27ae60,color:#fff
+    style G fill:#2ecc71,stroke:#27ae60,color:#fff
+    style H fill:#2ecc71,stroke:#27ae60,color:#fff
 ```
 
 ## What it can do
