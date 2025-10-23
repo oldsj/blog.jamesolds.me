@@ -78,6 +78,15 @@ a:hover {
     margin-bottom: 1em;
 }
 
+.post-hook {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #555;
+    margin: 1.5em 0;
+    padding-left: 1em;
+    border-left: 3px solid #3498db;
+}
+
 .post-summary {
     color: #555;
 }
