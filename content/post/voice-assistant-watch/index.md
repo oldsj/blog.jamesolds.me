@@ -91,10 +91,10 @@ I can also check my email and ask about GitHub repos, though I use those less th
 
 Other ideas: deadline reminders, meeting prep calls, daily wrap-ups. Not sure which of these would actually be useful versus annoying yet.
 
-## Why this is interesting
+## Why I'm excited
 
 I can literally call an AI assistant and have a normal conversation to plan out my day and manage projects. It has Git context, can check my email, and my watch face automatically updates in response to changes. All from my wrist.
 
-The infrastructure for building this is finally straightforward enough that going from idea to working prototype took less than a day. Zapier MCP handles the integrations. GPT-5 Realtime handles the conversation. Twilio and Fly.io handle the plumbing.
+The infrastructure for building this is finally straightforward enough that going from idea to working prototype took less than a day. Zapier MCP makes adding new integrations super easy. GPT-5 Realtime handles the conversation. Twilio and Fly.io handle the plumbing.
 
 The code is at [github.com/oldsj/assistant](https://github.com/oldsj/assistant) if you want to see how it works.
