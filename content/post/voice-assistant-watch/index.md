@@ -3,6 +3,7 @@ title: "Building a (useful) voice assistant I can call from my watch"
 date: 2025-10-23T13:27:34-04:00
 draft: false
 summary: "A voice assistant I can call from my watch that talks to GPT-5 Realtime, Todoist, Gmail, and GitHub. Built in a day."
+image: diagram.png
 ---
 
 
