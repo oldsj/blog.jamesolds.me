@@ -10,7 +10,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{ .Title }}">
-    {{ with .Params.summary }}<meta property="og:description" content="{{ . }}">{{ end }}
+    {{ $description := .Params.summary | default (.Summary | plainify | truncate 200) }}
+    <meta property="og:description" content="{{ $description }}">
     {{ if and .Params.image (ne (printf "%T" .Params.image) "maps.Params") }}
     <meta property="og:image" content="{{ .Permalink }}{{ .Params.image }}">
     {{ end }}
@@ -19,7 +20,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Title }}">
-    {{ with .Params.summary }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+    <meta name="twitter:description" content="{{ $description }}">
     {{ if and .Params.image (ne (printf "%T" .Params.image) "maps.Params") }}
     <meta name="twitter:image" content="{{ .Permalink }}{{ .Params.image }}">
     {{ end }}
