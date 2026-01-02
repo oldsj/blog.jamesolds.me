@@ -6,6 +6,11 @@ theme = "simple"
 [params]
     subtitle = "Tech, tools, and thoughts"
 
+[params.social]
+    resume = "/james-olds-resume.pdf"
+    github = "oldsj"
+    linkedin = "jamesrolds"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

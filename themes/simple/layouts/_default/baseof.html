@@ -30,6 +30,13 @@
     <header class="header">
         <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
         <p>{{ .Site.Params.subtitle | default "A simple blog" }}</p>
+        {{ if .Site.Params.social }}
+        <nav class="header-nav">
+            {{ with .Site.Params.social.resume }}<a href="{{ . }}" target="_blank">Resume</a>{{ end }}
+            {{ with .Site.Params.social.github }}<a href="https://github.com/{{ . }}" target="_blank">GitHub</a>{{ end }}
+            {{ with .Site.Params.social.linkedin }}<a href="https://linkedin.com/in/{{ . }}" target="_blank">LinkedIn</a>{{ end }}
+        </nav>
+        {{ end }}
     </header>
 
     <main>
